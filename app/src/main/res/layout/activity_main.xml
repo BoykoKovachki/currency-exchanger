@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/balanceImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/myBalanceTitleTextView"
+        android:src="@mipmap/account_balance" />
+
+    <TextView
+        android:id="@+id/myBalanceTitleTextView"
+        style="@style/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@+id/balanceImageView"
+        android:layout_alignBottom="@+id/balanceImageView"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/main_activity_balance"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        style="@style/regular_text_view"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/myBalanceTitleTextView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/currencyExchangeTitleTextView"
+        style="@style/title_text_view"
+        android:layout_below="@+id/balanceTextView"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_activity_currency_exchange_title"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/sellRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyExchangeTitleTextView"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner_sell"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/sellTitleTextView"
+            style="@style/regular_text_view"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginStart="5dp"
+            android:text="@string/main_activity_sell"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/sellImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/sellTitleTextView"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/arrow_up" />
+
+        <EditText
+            android:id="@+id/sellEditText"
+            style="@style/regular_edit_text"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@+id/sellImageView"
+            android:layout_alignBottom="@+id/sellImageView"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/sellExchangeRateSpinner"
+            android:layout_toEndOf="@+id/sellImageView"
+            android:gravity="end"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/sellExchangeRateSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sellEditText"
+            android:layout_alignBottom="@+id/sellEditText"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiveRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sellRelativeLayout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner_receive"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/receiveTitleTextView"
+            style="@style/regular_text_view"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginStart="5dp"
+            android:text="@string/main_activity_receive"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/receiveImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/receiveTitleTextView"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/arrow_down" />
+
+        <EditText
+            android:id="@+id/receiveEditText"
+            style="@style/regular_edit_text"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@+id/receiveImageView"
+            android:layout_alignBottom="@+id/receiveImageView"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/receiveExchangeRateSpinner"
+            android:layout_toEndOf="@+id/receiveImageView"
+            android:enabled="false"
+            android:gravity="end"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/receiveExchangeRateSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/receiveEditText"
+            android:layout_alignBottom="@+id/receiveEditText"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        style="@style/custom_button"
+        android:layout_below="@+id/receiveRelativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_button"
+        android:text="@string/submit"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+</RelativeLayout>

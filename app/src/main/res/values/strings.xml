@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CurrencyExchanger</string>
+
+    <string name="close">Close</string>
+    <string name="warning">Warning</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="currency_converted">Currency converted!</string>
+
+    <string name="main_activity_balance">My Balance</string>
+    <string name="main_activity_currency_exchange_title">Currency Exchange</string>
+    <string name="main_activity_sell">Sell</string>
+    <string name="main_activity_receive">Receive</string>
+
+    <string name="main_activity_successfully_exchanged_error_insufficient">Insufficient balance on account!</string>
+    <string name="main_activity_successfully_exchanged_no_tax">You have converted %s %s to %s %s. Your next %d exchange/s has no commission fee.</string>
+    <string name="main_activity_successfully_exchanged_tax">You have converted %s %s to %s %s. Commission Fee: %s</string>
+
+    <string name="server_communication_default_error">Server communication error!</string>
+
+</resources>
